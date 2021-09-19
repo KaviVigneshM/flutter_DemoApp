@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
+
+import './resources/string.dart';
 import './theme/AppColors.dart';
 import './widget/simDetails.dart';
 import './widget/balance.dart';
@@ -25,6 +27,8 @@ class MyAppPage extends StatefulWidget {
 }
 
 class _MyAppPageState extends State<MyAppPage> {
+  int badgeCount = 0;
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +38,7 @@ class _MyAppPageState extends State<MyAppPage> {
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-              onPressed: () {},
+              onPressed: () => Scaffold.of(context).openDrawer(),
               icon: Image.asset('assets/images/hamburgerMenu_Icon.png'),
             );
           },
@@ -62,18 +66,109 @@ class _MyAppPageState extends State<MyAppPage> {
           ),
         ],
       ),
-      body: Container(
+      body: ListView(
+        children: <Widget>[
+          simDetails(),
+          balance(),
+          SpecialPromo(),
+          LatestPromo(),
+          Roaming(),
+          Global(),
+          ClothBrands(),
+          FindButton(),
+          MovieSuggestion(),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentIndex,
+        onTap: (index) => setState(() => currentIndex = index),
+        selectedItemColor: AppColors().warm_blue_two,
+        unselectedItemColor: AppColors().black,
+        iconSize: 28,
+        items: [
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage('assets/images/mobile.png')),
+            label: 'Mobile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.wine_bar_outlined),
+            label: 'LifeStyle',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.wallet_membership_outlined),
+            label: 'Wallet',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.more_horiz_outlined),
+            label: 'More',
+          ),
+        ],
+      ),
+      drawer: Drawer(
         child: ListView(
-          children: <Widget>[
-            simDetails(),
-            balance(),
-            SpecialPromo(),
-            LatestPromo(),
-            Roaming(),
-            Global(),
-            ClothBrands(),
-            FindButton(),
-            MovieSuggestion(),
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: AppColors().purpleish_blue,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/profile.png'),
+                    radius: 30,
+                  ),
+                  SizedBox(height: 10),
+                  Opacity(
+                    opacity: 0.64,
+                    child: Text(
+                      string.myPrepaid,
+                      style: TextStyle(
+                        color: AppColors().white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Text(
+                    string.phoneNumber,
+                    style: TextStyle(
+                      color: AppColors().white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            ListTile(
+                title: Text(
+                  string.aboutGlobe,
+                  style: TextStyle(
+                    color: AppColors().black,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: Text(
+                  string.payment,
+                  style: TextStyle(
+                    color: AppColors().black,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
           ],
         ),
       ),

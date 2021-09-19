@@ -1,6 +1,7 @@
-import 'package:demo_app/theme/AppColors.dart';
 import 'package:flutter/material.dart';
+
 import '../resources/string.dart';
+import '../theme/AppColors.dart';
 import '../widget/OttCard.dart';
 import '../modals/OttData.dart';
 

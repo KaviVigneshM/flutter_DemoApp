@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../resources/string.dart';
 import '../theme/AppColors.dart';
 import '../modals/SuggestData.dart';
@@ -16,7 +17,7 @@ class Suggest extends StatelessWidget {
           offerName: 'GoUNLI180', offerValidity: '15 days UNLI to Globe'),
     ];
     return Container(
-      margin: EdgeInsets.fromLTRB(24, 27, 0, 10),
+      margin: EdgeInsets.fromLTRB(23, 27, 0, 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[

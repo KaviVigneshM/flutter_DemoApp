@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../theme/AppColors.dart';
 import '../modals/ClothBrandData.dart';
 
@@ -21,7 +22,7 @@ class ClothBrandCard extends StatelessWidget {
             fit: BoxFit.fill,
           )),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 15, 45, 0),
+            padding: EdgeInsets.fromLTRB(10, 15, 45, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[

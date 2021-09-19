@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../modals/ClothBrandData.dart';
 import '../resources/string.dart';
 import '../widget/ClothBrandCard.dart';

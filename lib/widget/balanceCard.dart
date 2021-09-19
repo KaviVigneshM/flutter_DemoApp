@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../theme/AppColors.dart';
 import '../modals/BalanceData.dart';
 
@@ -10,7 +11,7 @@ class balanceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.fromLTRB(10, 15, 0, 5),
-      width: 200,
+      width: 184,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),

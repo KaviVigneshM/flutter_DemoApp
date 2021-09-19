@@ -19,4 +19,5 @@ class AppColors {
   final grape_purple = const Color(0xFF511158);
   final red_brown = const Color(0xFF771313);
   final red_brown_two = const Color(0xFF941D1D);
+  final purpleish_blue = const Color(0xFF3E44F4);
 }

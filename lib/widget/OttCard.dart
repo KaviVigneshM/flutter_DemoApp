@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../theme/AppColors.dart';
 import '../modals/OttData.dart';
 
@@ -9,12 +10,13 @@ class OttCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(0, 10, 10, 10),
+      margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
       child: Card(
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(21),
         ),
+        color: AppColors().black,
         child: Container(
           width: 145,
           height: 168,

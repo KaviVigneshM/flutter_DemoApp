@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../widget/MoviePoster.dart';
 import '../modals/MovieData.dart';
 import '../theme/AppColors.dart';

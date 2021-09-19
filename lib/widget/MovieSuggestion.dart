@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../theme/AppColors.dart';
 import '../resources/string.dart';
 import '../widget/MovieCards.dart';
@@ -9,7 +10,8 @@ class MovieSuggestion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 35, horizontal: 20),
+      margin: EdgeInsets.fromLTRB(0, 36, 0, 0),
+      padding: EdgeInsets.fromLTRB(20, 40, 10, 32),
       decoration: BoxDecoration(
         color: AppColors().black,
         borderRadius: BorderRadius.only(

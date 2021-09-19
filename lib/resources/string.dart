@@ -25,4 +25,6 @@ class string {
   static const String popular = "Popular on";
   static const String latestOn = "Latest on";
   static const String youMight = "You might also like";
+  static const String aboutGlobe = "About Globe";
+  static const String payment = "Payment";
 }

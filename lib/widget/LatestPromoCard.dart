@@ -1,5 +1,5 @@
-import 'package:demo_app/theme/AppColors.dart';
 import 'package:flutter/material.dart';
+
 import '../modals/LatestData.dart';
 import '../theme/AppColors.dart';
 
