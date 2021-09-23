@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../theme/AppColors.dart';
-import '../modals/BalanceData.dart';
+import '../modals/BalanceDataModal.dart';
 
 class balanceCard extends StatelessWidget {
-  final BalanceData data;
+  final BalanceDataModal data;
   balanceCard({required this.data});
 
   @override

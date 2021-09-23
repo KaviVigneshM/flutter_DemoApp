@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Load Balance",
+        "amount": "P 1675.00",
+        "icon":"assets/images/card_P.png",
+        "validity":"Valid till 26 Dec"
+    },
+    {
+        "title": "Data Balance",
+        "amount": "300 MB",
+        "icon": "assets/images/card_play.png",
+        "validity": "of 12 GB"
+    },
+    {
+        "title": "Data Balance",
+        "amount": "300 MB",
+        "icon": "assets/images/card_play.png",
+        "validity": "of 12 GB"
+    }
+]

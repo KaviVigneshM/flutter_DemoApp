@@ -12,6 +12,8 @@ import './widget/Global.dart';
 import './widget/ClothBrands.dart';
 import './widget/FindButton.dart';
 import './widget/MovieSuggestion.dart';
+import 'widget/LifeStylePage.dart';
+import './container/UserBalanceContainer.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -69,7 +71,7 @@ class _MyAppPageState extends State<MyAppPage> {
       body: ListView(
         children: <Widget>[
           simDetails(),
-          balance(),
+          UserBalanceContainer(),
           SpecialPromo(),
           LatestPromo(),
           Roaming(),
@@ -80,6 +82,7 @@ class _MyAppPageState extends State<MyAppPage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
         onTap: (index) => setState(() => currentIndex = index),
         selectedItemColor: AppColors().warm_blue_two,
@@ -87,19 +90,36 @@ class _MyAppPageState extends State<MyAppPage> {
         iconSize: 28,
         items: [
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/images/mobile.png')),
+            icon: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.phone_android_outlined),
+            ),
             label: 'Mobile',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.wine_bar_outlined),
+            icon: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LifeStylePage()),
+                );
+              },
+              icon: Icon(Icons.wine_bar_outlined),
+            ),
             label: 'LifeStyle',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.wallet_membership_outlined),
+            icon: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.wallet_membership_outlined),
+            ),
             label: 'Wallet',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.more_horiz_outlined),
+            icon: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.more_horiz_outlined),
+            ),
             label: 'More',
           ),
         ],
